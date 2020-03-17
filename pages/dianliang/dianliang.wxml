@@ -1,0 +1,77 @@
+<!-- tab -->
+<block wx:if="{{loadingShow}}">
+  <loading>
+    加载中...
+  </loading>
+</block>
+<view>
+<!-- content -->
+  <view>
+    <view class="table">
+      <block wx:for="{{trainApprovalList}}" wx:key="{{code}}">
+        <view class="tr bgqs relative"  data-statu="open" data-id="{{item}}">
+        <!-- <view class="tr bgqs relative" bindlongpress="handleLongPress"  data-statu="open" data-id="{{item}}"> -->
+
+          <view class="icon_left absolute"></view>
+          <view class="content_left">
+            <view class="date">
+              <text class="fs11">{{item.forecast_date}}</text>
+              <!-- <text class="fs11">2011-11-11 11:11:11</text> -->
+            </view>
+            <view>
+              <text decode='true'>总电量&nbsp;&nbsp;{{item.sum_power}}mwh</text>
+              <!-- <text decode='true'>总电量&nbsp;&nbsp;11111mwh</text> -->
+
+            </view>
+            <view>
+              <text decode='true'>采集&nbsp;&nbsp;{{item.get_use_electricity}}mwh</text>
+              <!-- <text decode='true'>采集&nbsp;&nbsp;11111mwh</text> -->
+
+            </view>
+            <view class="clearfix"></view>
+          </view>
+          <view class="content_right fs12">
+            <text decode='true'>调整&nbsp;&nbsp;{{item.use_electricity_adjust}}mwh</text>
+            <!-- <text decode='true'>调整&nbsp;&nbsp;000mwh</text> -->
+
+          </view>
+        </view>
+      </block>
+      <view class="more_data" wx:if="{{hasMore}}">加载更多中...</view>
+      <view class="finish" wx:if="{{finish}}">数据已加载完毕</view>
+    </view>
+  </view>
+  
+<!--mask-->  
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+  <!--使用animation属性指定需要执行的动画-->  
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+  
+  <!--drawer content-->  
+  <view class="drawer_title">调整电量</view>  
+    <view class="drawer_content">  
+      <view class="top grid">  
+        <label class="title col-0">日期</label>
+        <text>{{currentDate.forecast_date}}</text>
+        <!-- <input class="input_base input_h30 col-1" name="rName" value="可自行定义内容"></input>   -->
+      </view>  
+      <view class="top grid">  
+        <label class="title col-0">采集电量</label>  
+        <text>{{currentDate.get_use_electricity}}mwh</text>
+        <!-- <input class="input_base input_h30 col-1" name="mobile" value="110"></input>   -->
+      </view>  
+      <view class="top grid">  
+        <label class="title col-0">总电量：</label>  
+        <text class="fs12">随调整改变，重新计算，采集+调整</text>
+        <!-- <input class="input_base input_h30 col-1" name="phone" value="拒绝伸手党"></input>   -->
+      </view>  
+      <view class="top grid">  
+        <label class="title col-0">调整值：</label>  
+        <input class="input_base input_h30 wd30"  type="number" bindinput="bindKeyInput"></input>
+        <text class="lh30">mwh</text>  
+      </view>
+    </view>  
+    <view class="btn_ok" bindtap="submit" data-statu="close">确定</view>  
+  </view>
+</view>
+

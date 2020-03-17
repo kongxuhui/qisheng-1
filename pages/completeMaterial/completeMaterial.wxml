@@ -1,0 +1,26 @@
+<view>
+  <view class='pl20 pt20'>
+    <form bindsubmit="formSubmit">
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>所属企业</text>
+      <!-- <input class="fr threec borderBtm blockLine h30 wd70" confirm-type="next" type="text" disabled value="山西启申综合能源服务有限公司"/> -->
+      <view class="absolute l28 t10 bgfff z10 threec">
+        <picker range='{{selectData}}' value='{{idx}}' bindchange='Change' range-key="name" data-id='{{selectData[index].id}}'>
+          <view class='picker threec pickVIew'>{{selectData[index].name}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>姓名</text>
+      <input name="true_name" class="absolute l28 t5 threec blockLine h30" confirm-type="next" type="text"/>
+    </view>
+    <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>备注</text>
+      <input name="beizhu" class="absolute l28 t5 threec blockLine h30" confirm-type="next" type="text"/>
+    </view>
+    <view class='pt30 w80 pr20'>
+      <button class="bgdl middle p0 mt30 mb10 borderR20 whiteoc shadow_1 font10" form-type='submit'>确定</button>
+    </view>
+    </form>
+  </view>
+</view>

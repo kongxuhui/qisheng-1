@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/completeMaterial/completeMaterial",
+    "pages/phoneLogin/phoneLogin",
+    "pages/dianfei/dianfei",
+    "pages/dianliang/dianliang",  
+    "pages/personCenter/personCenter",
+    "pages/personProtocol/personProtocol",
+    "pages/myTable/myTable",
+    "pages/editPersonInfo/editPersonInfo",
+    "pages/bindingNewPhone/bindingNewPhone",
+    "pages/equipmentView/equipmentView",
+    "pages/webView/webView",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "启申电力管理",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#818181",
+    "selectedColor": "#e44a37",
+    "backgroundColor": "#f7f7f7",
+    "list": [
+      {
+        "selectedIconPath": "assets/images/Battery_index_pressed@2x.png",
+        "iconPath": "assets/images/Battery_index_normal@2x.png",
+        "pagePath": "pages/index/index",
+        "text": "电量"
+      },
+      {
+        "selectedIconPath": "assets/images/data_index_pressed@2x.png",
+        "iconPath": "assets/images/data_index_normal@2x.png",
+        "pagePath": "pages/dianliang/dianliang",
+        "text": "数据"
+      },
+      {
+        "selectedIconPath": "assets/images/me_index_pressed@2x.png",
+        "iconPath": "assets/images/me_index_normal@2x.png",
+        "pagePath": "pages/personCenter/personCenter",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

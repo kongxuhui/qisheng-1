@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="pl10 pr10 pt10" style="border-top: 1px solid #ebebeb;">
+    <view class="wd100 h150 middle">
+      <!-- <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas> -->
+      <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec2 }}"></ec-canvas>
+    </view>
+    <view class="wd100 h218 middle mt10">
+      <!-- <view class="absolute r40 t-25 border bgfff z10 w100 pt5 pb5 pl5 pr5">
+        <picker range='{{selectData}}' value='{{idx}}' bindchange='Change' range-key="name" data-id='{{selectData[index].id}}'>
+          <view class='picker center'>{{selectData[index].name}}</view>
+        </picker>
+      </view> -->
+      <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ec1 }}"></ec-canvas>
+    </view>
+    <view class="wd100 mt10">
+      <view class="top_title">
+        <view class="left_icon"></view>
+        <view class="tt"><text>今日用电数值总量</text></view>
+      </view>
+      <view class="wd100 btm_con mt10">
+        <text>{{today_power}}MWH</text>
+      </view>
+    </view>
+    <view class="wd100 mt10">
+      <view class="top_title">
+        <view class="left_icon"></view>
+        <view class="tt"><text>累计用电数值总量</text></view>
+      </view>
+      <view class="wd100 btm_con mt10">
+        <text>{{totall_power}}MWH</text>
+      </view>
+    </view>
+  </view>
+</view>

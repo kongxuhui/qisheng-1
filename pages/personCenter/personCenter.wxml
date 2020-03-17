@@ -1,0 +1,21 @@
+<!-- 初次进入小程序显示页面 -->
+<view>
+  <!-- 已登录状态 -->
+  <view class='wd100 clear middle'>
+    <view style="height: 324rpx;">
+      <view class="bgqs h115 relative">
+        <view class="absolute avatar_view" style="width: 188rpx; height: 188rpx;">
+          <image style="width: 188rpx; height: 188rpx;border-radius: 50%; display: inline-block;" src="{{avatar}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="fs18 qsco mtb10 center">{{userInfo.true_name}}</view>
+    <view class="fs14 qsco mt10 center per" bindtap='tabPersonalInfo'>个人信息</view>
+    <view class="fs14 qsco center lxkf">
+      <button open-type="contact" class='fs14 qsco lxkfb'>联系客服</button>
+    </view>
+    <!-- <view class='threec mt240 center fs16' bindtap='goout'>
+      <text>退出登录</text>
+    </view> -->
+  </view>
+</view>

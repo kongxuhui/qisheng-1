@@ -1,0 +1,39 @@
+<view>
+  <view class='pl20 pt20'>
+    <form bindsubmit="formSubmit">
+    <view class='relative lh43 clear borderBtm_1 pr40 fs14 qsco' bindtap='tabPersonalInfo'>
+      <text class='fl fs14'>姓名</text>
+      <input disabled="{{flag}}" name="true_name" class="fr threec fs12 blockLine lh43 wd70" confirm-type="next" type="text" value="{{userInfo.true_name}}"/>
+    </view>
+    <view class='relative lh43 clear borderBtm_1 pr40 fs14 qsco' bindtap='tabPersonalInfo'>
+      <text class='fl fs14'>手机号</text>
+      <input disabled name="phone" class="fr threec fs12 blockLine lh43 wd70" confirm-type="next" type="number" value="{{userInfo.phone}}"/>
+      <button disabled="{{flag}}" class="absolute ss-yzm-btn_1 editPhone" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+    </view>
+    <view class='relative lh43 clear borderBtm_1 pr40 fs14 qsco'>
+      <text class='fl fs14'>所属企业</text>
+      <view class="fr r0bgfff z10 wd70 threec">
+        <picker range='{{selectData}}' value='{{idx}}' bindchange='Change' range-key="name" data-id='{{selectData[index].id}}'>
+          <view class='picker'>{{selectData[index].name}}</view>
+        </picker>
+      </view>
+    </view>
+    <!-- <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <text class='fl fs16'>选择地区</text>
+      <picker disabled name="area" class="fr wd70" mode="region" bindchange="bindRegionChange" value="{{region}}">
+        <view class="picker">
+          {{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+      <image class='absolute ss-yzm-btn_1' style="width: 20px; height: 20px; display: inline-block;" src="../../assets/images/jt_right.png"></image>
+    </view> -->
+    <!-- <view class='relative h20 clear borderBtm pr40 pt10 pb10' bindtap='tabPersonalInfo'>
+      <view class='fl fs16'>备注</view>
+      <input disabled="{{flag}}" name="common" class="fr threec fs12 borderBtm blockLine h40 wd70" confirm-type="done" type="text" value="{{userInfo.common}}"/>
+    </view> -->
+    <view class='absolute  w35'>
+      <button form-type='submit'>提交</button>
+    </view>
+    </form>
+  </view>
+</view>

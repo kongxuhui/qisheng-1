@@ -1,0 +1,18 @@
+/* pages/completeMaterial/completeMaterial.wxss */
+.l28{
+  left: 28%;
+  width: 66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.t5{
+  top: 5px;
+}
+.pickVIew{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}

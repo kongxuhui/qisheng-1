@@ -1,0 +1,20 @@
+<block wx:if="{{loadingShow}}">
+  <loading>
+    加载中...
+  </loading>
+</block>
+
+<view>
+<!-- logo -->
+<form bindsubmit="formSubmit">
+  <view class='center mb30 mt50'>
+    <text>手机号码快速注册</text>
+  </view>
+  <view class='wd80 middle mt30 mb10'>
+    <button class="bgdl middle p0 mt10 mb10 borderR20 whiteoc shadow_1" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">手机号一键注册</button>
+  </view>
+  <view class="center threec">
+    <text class="fs12">注册即代表同意</text><text class="fs12 bluec" bindtap="getPersonProtocol">用户协议</text>
+  </view>
+  </form>
+</view>

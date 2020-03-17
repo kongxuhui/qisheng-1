@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<block wx:if="{{loadingShow}}">
+  <loading>
+    加载中...
+  </loading>
+</block>
+
+
+<view>
+  <view class="center mt50 mb50"><image class="logo" src="../../assets/images/logo.png"></image></view>
+  <view>
+    <!-- <view class="wd40 h30 lh30 wxdl center bgwx whiteoc middle"> -->
+      <button class="wx_login h30 lh30 wxdl bgwx whiteoc middle" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        <image class="wx_login_img verMiddle blockLine" src="../../assets/images/wx.png"></image>
+        <text> 微信账号登录</text> 
+      </button>
+    <!-- </view> -->
+  </view>
+</view>

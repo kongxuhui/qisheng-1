@@ -1,0 +1,16 @@
+<view class="container pl10 pr10">
+  <view class="border pl10 pr10">
+    <view class="wd100 h350 xuxian middle mt10">
+      <!-- <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas> -->
+      <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ec1 }}"></ec-canvas>
+    </view>
+    <view class="wd100 h250 xuxian middle mt30 mb30 pb20 relative">
+      <view class="absolute r40 t10 bgfff z10">
+        <picker range='{{selectData}}' value="{{index}}" bindchange='Change'>
+          <view class='picker'>{{selectData[index]}}</view>
+        </picker>
+      </view>
+      <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec2 }}"></ec-canvas>
+    </view>
+  </view>
+</view>

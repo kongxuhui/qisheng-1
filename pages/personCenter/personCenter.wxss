@@ -1,0 +1,44 @@
+/* pages/personCenter/personCenter.wxss */
+.loginPhoto{
+  width: 60px;
+  height: 60px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 2px;
+}
+button::after {
+  border: none;
+}
+button {
+  background-color: #fff;
+  line-height: 30rpx;
+  padding: 0;
+}
+.avatar_view{
+  left: 50%;
+  bottom: -94rpx;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  box-shadow:0 0 8rpx #0D7871;
+}
+.h115{
+  height: 230rpx;
+}
+.mtb10{
+  margin-top: 20rpx;
+  margin-bottom: 66rpx;
+}
+.mt10r{
+  margin-top: 20rpx;
+}
+.per{
+  border-top: 2rpx solid #E6F1F0;
+  border-bottom: 2rpx solid #E6F1F0;
+  line-height: 86rpx;
+}
+.lxkf{
+  border-bottom: 2rpx solid #E6F1F0;
+}
+.lxkfb{
+  line-height: 86rpx;
+}

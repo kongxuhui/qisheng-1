@@ -1,0 +1,47 @@
+/* pages/dianliang/dianliang.wxss */
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+.wd355{
+  width: 355rpx;
+}
+.h150{
+  height: 300rpx;
+}
+.h218{
+  height:436rpx;
+}
+.h350{
+  height: 350px;
+}
+.h200{
+  height: 200px;
+}
+.top_title{
+  height: 40rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #0D7871;
+}
+.left_icon{
+  display: inline-block;
+  width: 14rpx;
+  height: 40rpx;
+  margin: 0 12px 0 0;
+  background-color: #0D7871;
+  border-radius: 2px;
+  position: absolute;
+}
+.tt{
+  padding-left: 40rpx;
+}
+.btm_con{
+  background-color: rgba(13,120,113,.1);
+  color: #0D7871;
+  font-size: 32rpx;
+  line-height: 68rpx;
+  text-align: center;
+  border-radius: 4px;
+}

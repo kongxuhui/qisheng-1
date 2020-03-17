@@ -1,0 +1,12 @@
+/* pages/dianliang/dianliang.wxss */
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+.h350{
+  height: 350px;
+}
+.h200{
+  height: 200px;
+}

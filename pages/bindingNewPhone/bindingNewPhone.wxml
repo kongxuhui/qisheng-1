@@ -1,0 +1,25 @@
+<block wx:if="{{loadingShow}}">
+  <loading>
+    加载中...
+  </loading>
+</block>
+
+<view>
+<!-- logo -->
+<form bindsubmit="formSubmit">
+  <view class='wd80 middle mb30 mt50 fs12 twoc'>
+    <text>请输入您要绑定的新手机号码，绑定成功后可用此号码登录</text>
+  </view>
+  <view class='wd80 mb20 middle'>
+    <input  bindinput="bindPhone" class="threec fs12 borderBtm_blue h50 wd100" maxlength='11' confirm-type="next" type="tel" placeholder="请输入手机号" />
+  </view>
+  <view class='wd80 mb20 middle'>
+    <input  bindinput="bindCode" class="threec blockLine fs12 borderBtm_blue h50 wd40" confirm-type="done" maxlength="6" placeholder="请输入验证码" />
+    <view class='threec blockLine pl5 pr5 pt5 pb5 fs12 ml10 ss-yzm-btn_1' wx:if="{{!isShow}}"  bindtap='getCode'>获取验证码</view>
+    <view class='border blockLine threec pl5 pr5 pt5 pb5 fs12 ml10 ss-yzm-btn_1' wx:if="{{isShow}}">{{sec}}秒后重新发送</view>
+  </view>
+  <view class='wd80 middle mt30 mb10'>
+    <button class="bgdl middle p0 mt10 mb10 borderR20 whiteoc shadow_1" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定</button>
+  </view>
+  </form>
+</view>

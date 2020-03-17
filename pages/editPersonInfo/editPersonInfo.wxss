@@ -1,0 +1,40 @@
+/* pages/editPersonInfo/editPersonInfo.wxss */
+.editPhone{
+  border: none;
+  background: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  width: 45%;
+}
+.editPhone::after{
+  border: none;
+}
+.w35{
+  width: 35%;
+  font-size: 28rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 212rpx;
+}
+.w35 button{
+  background-color: #6CACA8;
+  font-size: 28rpx;
+  color: #fff;
+  border-radius: 0%;
+}
+.borderBtm_1{
+  border-bottom: 1px solid #E6F1F0;
+}
+.lh43{
+  height: 43px!important;
+  line-height: 43px;
+}
+button[disabled]:not([type]){
+  background-color: #fff;
+}
+button::after{
+  border: none;
+}
